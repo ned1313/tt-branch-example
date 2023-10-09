@@ -1,21 +1,20 @@
 provider "azurerm" {
-  features {
-    
-  }
+  features {}
+  use_oidc = true
 }
 
 variable "prefix" {
-  type = string
+  type        = string
   description = "(Required) The prefix which should be used for all resources in this example"
 }
 
 variable "location" {
-  type = string
+  type        = string
   description = "(Required) The Azure Region in which all resources in this example should be created."
 }
 
 variable "environment" {
-  type = string
+  type        = string
   description = "(Required) The environment in which all resources in this example should be created."
 }
 

@@ -8,5 +8,7 @@ terraform {
 
   backend "azurerm" {
     # Details configured by GitHub Actions
+    use_azuread_auth = true
+    use_oidc         = true
   }
 }

@@ -13,7 +13,7 @@ env:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'Terraform Format and Validate'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is 
