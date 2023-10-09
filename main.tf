@@ -6,13 +6,13 @@ provider "azurerm" {
 variable "prefix" {
   type        = string
   description = "(Optional) The prefix which should be used for all resources in this example. Defaults to taco."
-    default     = "taco"
+  default     = "taco"
 }
 
 variable "location" {
   type        = string
   description = "(Optional) The Azure Region in which all resources in this example should be created. Defaults to East US."
-    default     = "eastus"
+  default     = "eastus"
 }
 
 variable "environment" {
