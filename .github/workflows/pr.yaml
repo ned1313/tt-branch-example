@@ -1,7 +1,11 @@
 # Action to run a plan on a pull request
 name: 'Run Plan on PR'
 
-on: pull_request
+on: 
+  pull_request:
+    branches-ignore:
+        - 'main'
+        - 'feature/*'
 
 env:
   TF_LOG: INFO
