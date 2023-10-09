@@ -73,7 +73,7 @@ jobs:
         ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-      run: terraform plan -no-color
+      run: terraform plan -var environment=$GITHUB_BASE_REF -no-color
 
     # Add a comment to pull requests with plan results
     - name: Add Plan Comment
