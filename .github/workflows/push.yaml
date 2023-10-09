@@ -11,6 +11,12 @@ env:
   TF_LOG: INFO
   TF_INPUT: false
 
+permissions:
+  id-token: write
+  issues: write
+  pull-requests: write
+  contents: read
+
 jobs:
   terraform:
     name: 'Terraform Format and Validate'
