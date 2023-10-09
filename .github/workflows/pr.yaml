@@ -75,7 +75,7 @@ jobs:
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       run: terraform plan -var environment=$GITHUB_BASE_REF -no-color
 
-    # Add a comment to pull requests with plan results
+    # Add a comment to pull requests with plan results weeeeeee
     - name: Add Plan Comment
       id: comment
       uses: actions/github-script@v6
