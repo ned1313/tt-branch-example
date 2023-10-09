@@ -20,8 +20,7 @@ jobs:
     name: 'Terraform Format and Validate'
     runs-on: ubuntu-latest
 
-    # Use the Bash shell regardless whether the GitHub Actions runner is 
-    # ubuntu-latest, macos-latest, or windows-latest
+    # Use the Bash shell
     defaults:
       run:
         shell: bash
