@@ -5,12 +5,14 @@ provider "azurerm" {
 
 variable "prefix" {
   type        = string
-  description = "(Required) The prefix which should be used for all resources in this example"
+  description = "(Optional) The prefix which should be used for all resources in this example. Defaults to taco."
+  default     = "taco"
 }
 
 variable "location" {
   type        = string
-  description = "(Required) The Azure Region in which all resources in this example should be created."
+  description = "(Optional) The Azure Region in which all resources in this example should be created. Defaults to East US."
+  default     = "eastus"
 }
 
 variable "environment" {
@@ -20,7 +22,7 @@ variable "environment" {
 
 resource "azurerm_resource_group" "main" {
   location = var.location
-  name     = "${var.prefix}-branch"
+  name     = "${var.prefix}-${var.environment}-branch"
 
   tags = {
     environment = var.environment
